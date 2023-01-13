@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LazyLoadDialogComponent } from './lazy-load-dialog.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('LazyLoadDialogComponent', () => {
   let component: LazyLoadDialogComponent;
@@ -8,9 +8,10 @@ describe('LazyLoadDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LazyLoadDialogComponent ]
+      declarations: [LazyLoadDialogComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(LazyLoadDialogComponent);
     component = fixture.componentInstance;

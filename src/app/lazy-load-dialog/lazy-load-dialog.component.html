@@ -1,1 +1,15 @@
-<p>lazy-load-dialog works!</p>
+<mat-toolbar>
+  Lazy Load Angular Material Dialogs
+</mat-toolbar>
+
+<button mat-raised-button (click)="lazyDialog.openDialog('my-form')">
+  Form Dialog
+</button>
+
+<button mat-raised-button (click)="lazyDialog.openDialog('my-video')">
+  Video Dialog
+</button>
+
+<button mat-raised-button (click)="lazyDialog.openDialog('my-list')">
+  List Dialog
+</button>

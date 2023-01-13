@@ -1,25 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { LazyLoadDialogRoutingModule } from './lazy-load-dialog-routing.module';
-import { MatListModule } from '@angular/material/list';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { YouTubePlayerModule } from '@angular/youtube-player';
-import { MatDialogModule } from '@angular/material/dialog';
-import { HttpClientModule } from '@angular/common/http';
+import { LazyLoadService } from './service/lazy-load.service';
+
 
 
 @NgModule({
   declarations: [
   ],
   imports: [
-    CommonModule,
     LazyLoadDialogRoutingModule,
-    MatListModule,
-    MatFormFieldModule,
-    YouTubePlayerModule,
-    MatDialogModule,
-    HttpClientModule
+    CommonModule,
   ],
+  providers: [LazyLoadService],
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LazyLoadDialogModule { }

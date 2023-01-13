@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LazyLoadService } from './service/lazy-load.service';
 
 @Component({
   selector: 'app-lazy-load-dialog',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LazyLoadDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public lazyDialog: LazyLoadService) { }
 
   ngOnInit(): void {
   }
